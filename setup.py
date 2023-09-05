@@ -5,9 +5,9 @@ from aiogram import Bot, Dispatcher, F
 import logging
 
 
-BOT_TOKEN = '6250154933:AAGiuVuTLqPcXM8bx1vJRM2BK2XShmEXPcc' 
-CHANNEL_ID =  -1001699275031
-ADMIN_ID = 430692329
+BOT_TOKEN = '6445212413:AAFsmlCqkTWt0m1rMpTWZc0YGZMCSFa8fmk' 
+CHANNEL_ID =  -1001517003300
+ADMIN_ID = 1889004772
 async def approve_request (chat_join: ChatJoinRequest, bot: Bot):
    msg= f"Ваша заявка одобрена!\n\nВступить в канал: https://t.me/+pZn6bvXbkMI1NWEy"
    button = InlineKeyboardButton(text='ВСТУПИТЬ', url='https://t.me/+pZn6bvXbkMI1NWEy', disable_web_page_preview=True)   
