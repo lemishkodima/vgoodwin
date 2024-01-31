@@ -12,6 +12,10 @@ from google.oauth2.service_account import Credentials
 BOT_TOKEN = '6524445610:AAFyCvTHI9qpKajyXzNVTNP3GCPM9jWVvZ0' 
 CHANNEL_ID =  -1001517003300
 ADMIN_ID = 1889004772
+
+bot = Bot(token=BOT_TOKEN)
+dp = Dispatcher()
+
 async def approve_request(chat_join: ChatJoinRequest, bot: Bot):
     start_msg = "Ваша заявка одобрена, для получения ссылки нажмите Start⬇️"
     start_button = KeyboardButton(text='Start')
