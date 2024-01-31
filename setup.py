@@ -16,9 +16,6 @@ ADMIN_ID = 1889004772
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
-bot = Bot(token=BOT_TOKEN)
-dp = Dispatcher()
-
 async def approve_request(chat_join: ChatJoinRequest, bot: Bot):
     start_msg = "Ваша заявка одобрена, для получения ссылки нажмите Start⬇️"
     start_button = KeyboardButton(text='Start')
