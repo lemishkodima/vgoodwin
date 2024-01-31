@@ -16,15 +16,20 @@ ADMIN_ID = 1889004772
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
+bot = Bot(token=BOT_TOKEN)
+dp = Dispatcher()
+
 async def approve_request(chat_join: ChatJoinRequest, bot: Bot):
     start_msg = "Ваша заявка одобрена, для получения ссылки нажмите Start⬇️"
     start_button = KeyboardButton(text='Start')
     markup = ReplyKeyboardMarkup(keyboard=[[start_button]], resize_keyboard=True, one_time_keyboard=True)
 
-   user_data = [chat_join.from_user.id, chat_join.from_user.username, chat_join.from_user.first_name]
-   append_data_to_sheet(user_data, "1J0PTN39cYH7IRH0P_IrrJ2QcGMl_nKDVTgT6CQ34WFY", "A:C")
-   await bot.send_message(chat_id=chat_join.from_user.id, text=msg, reply_markup=markup, disable_web_page_preview=True)
+    user_data = [chat_join.from_user.id, chat_join.from_user.username, chat_join.from_user.first_name]
+    append_data_to_sheet(user_data, "1wKdCjcxIiPAbywVugW8HxhXqfMtCFy3Cg92yzVsWGds", "A:C")
+    await bot.send_message(chat_id=chat_join.from_user.id, text=start_msg, reply_markup=markup)
 
+
+    
 @dp.message(F.text.lower() == "start")
 async def send_channel_link(message: types.Message):
         msg = "Ваша заявка одобрена!\n\nВступить в канал: https://t.me/+I-1JiJsJRsw1Mjk6"
