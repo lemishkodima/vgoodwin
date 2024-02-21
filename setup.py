@@ -30,7 +30,7 @@ async def send_channel_link(message: types.Message):
         button = InlineKeyboardButton(text='ВСТУПИТЬ', url='https://t.me/+Moe57nD94uU5YmEy')
         markup = InlineKeyboardMarkup(inline_keyboard=[[button]])
 
-        user_data = [chat_join.from_user.id, chat_join.from_user.username, chat_join.from_user.first_name]
+        user_data = [message.from_user.id, message.from_user.username, message.from_user.first_name]
         append_data_to_sheet(user_data, "1eam-jcAWOC54U6hoZmtmBcG4v7rzy--NtTHoZdDxLHA", "A:C")
 
         await message.answer(text=msg, reply_markup=markup, disable_web_page_preview=True)
