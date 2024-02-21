@@ -20,9 +20,6 @@ async def approve_request(chat_join: ChatJoinRequest, bot: Bot):
     start_msg = "Ваша заявка одобрена, для получения ссылки нажмите Start⬇️"
     start_button = KeyboardButton(text='Start')
     markup = ReplyKeyboardMarkup(keyboard=[[start_button]], resize_keyboard=True, one_time_keyboard=True)
-
-    user_data = [chat_join.from_user.id, chat_join.from_user.username, chat_join.from_user.first_name]
-    append_data_to_sheet(user_data, "1eam-jcAWOC54U6hoZmtmBcG4v7rzy--NtTHoZdDxLHA", "A:C")
     await bot.send_message(chat_id=chat_join.from_user.id, text=start_msg, reply_markup=markup)
 
 
@@ -32,6 +29,9 @@ async def send_channel_link(message: types.Message):
         msg = "Ваша заявка одобрена!\n\nВступить в канал: https://t.me/+Moe57nD94uU5YmEy"
         button = InlineKeyboardButton(text='ВСТУПИТЬ', url='https://t.me/+Moe57nD94uU5YmEy')
         markup = InlineKeyboardMarkup(inline_keyboard=[[button]])
+
+        user_data = [chat_join.from_user.id, chat_join.from_user.username, chat_join.from_user.first_name]
+        append_data_to_sheet(user_data, "1eam-jcAWOC54U6hoZmtmBcG4v7rzy--NtTHoZdDxLHA", "A:C")
 
         await message.answer(text=msg, reply_markup=markup, disable_web_page_preview=True)
 
