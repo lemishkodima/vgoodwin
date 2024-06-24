@@ -5,7 +5,7 @@ from aiogram import Bot, Dispatcher, types, F
 import logging
 
 # Bot 1 configuration
-BOT1_TOKEN = '6427870841:AAGC7wKTWNgT14wxxLCovMl9h7t2HqiUZZE'
+BOT_TOKEN = '6427870841:AAGC7wKTWNgT14wxxLCovMl9h7t2HqiUZZE'
 CHANNEL1_ID = -1001419655243
 CHANNEL2_ID = -1001819624357
 ADMIN_ID = 2136559110
