@@ -20,8 +20,8 @@ async def approve_request_bot1(chat_join: ChatJoinRequest, bot: Bot):
 
 # Logic for approving request for channel 2
 async def approve_request_bot2(chat_join: ChatJoinRequest, bot: Bot):
-    msg = "Ваша заявка одобрена!\n\nВступить в канал: https://t.me/+5TDzGQl2kYswYmEy"
-    button = InlineKeyboardButton(text='ВСТУПИТЬ', url='https://t.me/+5TDzGQl2kYswYmEy', disable_web_page_preview=True)
+    msg = "Ваша заявка одобрена!\n\nВступить в канал: https://t.me/+aRKPZNgPlV40YTIy"
+    button = InlineKeyboardButton(text='ВСТУПИТЬ', url='https://t.me/+aRKPZNgPlV40YTIy', disable_web_page_preview=True)
     markup = InlineKeyboardMarkup(inline_keyboard=[[button]])
     await bot.send_message(chat_id=chat_join.from_user.id, text=msg, reply_markup=markup, disable_web_page_preview=True)
 
