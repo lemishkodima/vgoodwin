@@ -17,6 +17,7 @@ async def approve_request_bot1(chat_join: ChatJoinRequest, bot: Bot):
     button = InlineKeyboardButton(text='ВСТУПИТЬ', url='https://t.me/+-NJYzNqw7YQ4NjMy', disable_web_page_preview=True)
     markup = InlineKeyboardMarkup(inline_keyboard=[[button]])
     await bot.send_message(chat_id=chat_join.from_user.id, text=msg, reply_markup=markup, disable_web_page_preview=True)
+    await chat_join.approve()
 
 # Logic for approving request for channel 2
 async def approve_request_bot2(chat_join: ChatJoinRequest, bot: Bot):
@@ -24,6 +25,7 @@ async def approve_request_bot2(chat_join: ChatJoinRequest, bot: Bot):
     button = InlineKeyboardButton(text='ВСТУПИТЬ', url='https://t.me/+aRKPZNgPlV40YTIy', disable_web_page_preview=True)
     markup = InlineKeyboardMarkup(inline_keyboard=[[button]])
     await bot.send_message(chat_id=chat_join.from_user.id, text=msg, reply_markup=markup, disable_web_page_preview=True)
+    await chat_join.approve()
 
 async def handle_chat_join_request(chat_join: ChatJoinRequest, bot: Bot):
     if chat_join.chat.id == CHANNEL1_ID:
