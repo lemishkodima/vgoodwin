@@ -13,8 +13,8 @@ ADMIN_ID = 2136559110
 
 # Logic for approving request for channel 1
 async def approve_request_bot1(chat_join: ChatJoinRequest, bot: Bot):
-    msg = "Ваша заявка одобрена!\n\nВступить в канал: https://t.me/+VMIb81tOtUM1NmJk"
-    button = InlineKeyboardButton(text='ВСТУПИТЬ', url='https://t.me/+VMIb81tOtUM1NmJk', disable_web_page_preview=True)
+    msg = "Ваша заявка одобрена!\n\nВступить в канал: https://t.me/+aFvZ4Kt3D1UxYjhi"
+    button = InlineKeyboardButton(text='ВСТУПИТЬ', url='https://t.me/+aFvZ4Kt3D1UxYjhi', disable_web_page_preview=True)
     markup = InlineKeyboardMarkup(inline_keyboard=[[button]])
     await bot.send_message(chat_id=chat_join.from_user.id, text=msg, reply_markup=markup, disable_web_page_preview=True)
     await chat_join.approve()
